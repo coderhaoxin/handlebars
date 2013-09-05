@@ -1,6 +1,6 @@
 {
   "name": "node-app-seed",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "a node.js app seed project",
   "main": "app.js",
   "scripts": {
@@ -35,6 +35,11 @@
   "dependencies": {
     "express": "~3.3.8",
     "mongoose": "~3.6.19",
-    "mongodb": "~1.3.19"
+    "mongodb": "~1.3.19",
+    "oss-client": "0.0.8",
+    "baidu-push": "0.0.3"
+  },
+  "directories": {
+    "test": "test"
   }
 }
