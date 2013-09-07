@@ -1,4 +1,11 @@
-node-app-seed
-=============
+### node-app-seed
+* a project for node.js(express) app template
 
-node-app-seed
+### recommend some global node.js modules
+```
+[sudo] npm install -g mocha
+[sudo] npm install -g node-inspector
+```
+
+* [mocha](https://github.com/visionmedia/mocha)
+* [node-inspector](https://github.com/node-inspector/node-inspector)
