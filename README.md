@@ -11,3 +11,6 @@
 * [mocha](https://github.com/visionmedia/mocha)
 * [node-inspector](https://github.com/node-inspector/node-inspector)
 * [more grunt plugins](http://gruntjs.com/plugins)
+
+### some useful util modules
+* [gm: image process](https://github.com/aheckmann/gm)
