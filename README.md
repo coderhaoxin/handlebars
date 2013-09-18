@@ -14,3 +14,4 @@
 
 ### some useful util modules
 * [gm: image process](https://github.com/aheckmann/gm)
+* [nodemailer](https://github.com/andris9/Nodemailer)
