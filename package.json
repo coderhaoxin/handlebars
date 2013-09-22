@@ -33,7 +33,8 @@
     "grunt-contrib-csslint": "~0.1.2",
     "grunt-contrib-sass": "~0.5.0",
     "grunt-contrib-less": "~0.7.0",
-    "grunt-nodemon": "~0.1.1"
+    "grunt-nodemon": "~0.1.1",
+    "debug": "~0.7.2"
   },
   "dependencies": {
     "express": "~3.3.8",
@@ -43,7 +44,8 @@
     "baidu-push": "0.0.3",
     "validator": "~1.5.1",
     "node-uuid": "~1.4.1",
-    "async": "~0.2.9"
+    "async": "~0.2.9",
+    "q": "~0.9.7"
   },
   "directories": {
     "test": "test"
