@@ -6,4 +6,5 @@ npm-debug.log
 .grunt
 _SpecRuner.html
 _SpecRunner.html
+.nodemonignore
 
