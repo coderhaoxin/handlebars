@@ -94,19 +94,18 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
-
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-less');
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-csslint');
 
+  //min
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('develop', ['concat', 'uglify', 'jshint']);
+  grunt.registerTask('test',    ['']);
   grunt.registerTask('release', ['']);
+
 }
