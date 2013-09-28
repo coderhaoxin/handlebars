@@ -91,7 +91,23 @@ module.exports = function (grunt) {
     }
   });
 
+  // grunt.loadNpmTasks('grunt-contrib-watch');
+  // grunt.loadNpmTasks('grunt-nodemon');
+
+  // grunt.loadNpmTasks('grunt-contrib-concat');
+
+  // grunt.loadNpmTasks('grunt-contrib-jasmine');
+
+  // grunt.loadNpmTasks('grunt-contrib-jshint');
+  // grunt.loadNpmTasks('grunt-contrib-csslint');
+
+  //min
+  // grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  // grunt.loadNpmTasks('grunt-contrib-uglify');
+  // grunt.loadNpmTasks('grunt-contrib-cssmin');
+
   grunt.registerTask('develop', ['concat', 'uglify', 'jshint']);
   grunt.registerTask('test',    ['']);
   grunt.registerTask('release', ['']);
+
 }

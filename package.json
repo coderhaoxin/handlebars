@@ -47,6 +47,7 @@
     "express": "~3.3.8",
     "mongoose": "~3.6.19",
     "sequelize": "~2.0.0-beta.0",
+    "mysql": "~2.0.0-alpha9",
     "async": "~0.2.9",
     "validator": "~1.5.1",
     "node-uuid": "~1.4.1",
