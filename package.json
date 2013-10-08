@@ -40,18 +40,17 @@
     "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-usemin": "~0.1.12",
-    "grunt-modernizr": "~0.3.0",
     "load-grunt-tasks": "~0.1.0"
   },
   "dependencies": {
     "express": "~3.3.8",
+    "redis": "~0.8.6",
     "mongoose": "~3.6.19",
     "sequelize": "~2.0.0-beta.0",
     "mysql": "~2.0.0-alpha9",
     "async": "~0.2.9",
     "validator": "~1.5.1",
     "node-uuid": "~1.4.1",
-    "q": "~0.9.7",
     "oss-client": "0.0.8",
     "baidu-push": "0.0.3"
   },

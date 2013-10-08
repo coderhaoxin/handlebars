@@ -1,0 +1,31 @@
+{
+  "name": "node-app-seed",
+  "version": "0.0.0",
+  "homepage": "https://github.com/coderhaoxin/node-app-seed",
+  "authors": [
+    "haoxin <coderhaoxin@outlook.com>"
+  ],
+  "description": "a node.js app seed project",
+  "main": "index.html",
+  "keywords": [
+    "node",
+    "app",
+    "seed"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.0.8",
+    "jquery": "~2.0.3",
+    "bootstrap": "~3.0.0",
+    "foundation": "~4.3.1",
+    "blueimp-file-upload": "~8.8.5",
+    "fine-uploader": "~3.9.0"
+  }
+}
