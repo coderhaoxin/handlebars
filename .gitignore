@@ -8,3 +8,4 @@ _SpecRuner.html
 _SpecRunner.html
 .nodemonignore
 
+static-dev/lib
