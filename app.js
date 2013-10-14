@@ -1,5 +1,13 @@
 'use strict';
+var fs     = require('fs');
 var config = require('./config');
+
+/*
+* app initialize
+*/
+if (!fs.existsSync(__dirname + '/upload')) {
+  fs.mkdirSync('upload');
+}
 
 //mongodb(mongoose)
 var mongoose = require('mongoose');

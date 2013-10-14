@@ -91,7 +91,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('develop', ['concat', 'uglify', 'jshint']);
+  grunt.registerTask('dev', ['nodemon', 'watch']);
   grunt.registerTask('test',    ['']);
   grunt.registerTask('release', ['']);
 }
