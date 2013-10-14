@@ -14,4 +14,9 @@
 
 ### some useful util modules
 * [gm: image process](https://github.com/aheckmann/gm)
+
+```bash
+apt-get install imagemagick    #图片处理
+```
+
 * [nodemailer](https://github.com/andris9/Nodemailer)
