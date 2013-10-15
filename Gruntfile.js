@@ -5,6 +5,45 @@ module.exports = function (grunt) {
   grunt.initConfig({
     meta: {},
     //
+    concurrent: {
+      nodemon: {
+        tasks: ['nodemon'],
+        options: {
+          logConcurrentOutput: true
+        }
+      },
+      watch: {
+        tasks: ['watch'],
+        options: {
+          logConcurrentOutput: true
+        }
+      },
+      autoprefixer: {
+        tasks: ['autoprefixer'],
+        options: {
+          logConcurrentOutput: true
+        }
+      },
+      concat: {
+        tasks: ['concat'],
+        options: {
+          logConcurrentOutput: true
+        }
+      },
+      jasmine: {
+        tasks: ['jasmine'],
+        options: {
+          logConcurrentOutput: true
+        }
+      },
+      csslint: {
+        tasks: ['csslint'],
+        options: {
+          logConcurrentOutput: true
+        }
+      }
+    },
+    //
     nodemon: {
       prod: {
         options: {
@@ -32,21 +71,6 @@ module.exports = function (grunt) {
       js: {
         src: 'static-dev/js/*.js',
         dest: 'static/js/app.js'
-      },
-      css: {
-        src: 'static-dev/css/*.css',
-        dest: 'static/css/app.css'
-      }
-    },
-    //min js files
-    uglify: {
-      options: {
-        mangle: false
-      },
-      js: {
-        files: {
-          'static/js/app.min.js': ['static/js/app.js']
-        }
       }
     },
     //
@@ -55,21 +79,24 @@ module.exports = function (grunt) {
       afterconcat: ['static/js/app.js']
     },
     //
-    jasmine: {
-      src: 'static-dev/js/*.js',
-      options: {
-        specs: 'test/static/*.js',
-      }
-    },
-    //
     csslint: {
       src: 'static/css/app.css'
     },
     //
-    cssmin: {
-      css: {
-        src: 'static/css/app.css',
-        dest: 'static/css/app.min.css'
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions']
+      },
+      concat: {
+        src: 'static-dev/css/*.css',
+        dest: 'static/css/app.css'
+      }
+    },
+    //
+    jasmine: {
+      src: 'static-dev/js/*.js',
+      options: {
+        specs: 'test/static/*.js',
       }
     },
     //
@@ -91,7 +118,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('dev', ['nodemon', 'watch']);
+  grunt.registerTask('dev', ['concurrent:nodemon', 'concurrent:watch']);
   grunt.registerTask('test',    ['']);
   grunt.registerTask('release', ['']);
 }
