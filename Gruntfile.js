@@ -93,12 +93,23 @@ module.exports = function (grunt) {
       }
     },
     //
-    jasmine: {
+    jasmine: { //测试应该测试release后的，而非dev的
       src: 'static-dev/js/*.js',
       options: {
         specs: 'test/static/*.js',
       }
     },
+    clean: {
+      release: {
+        src: ['static/css/*.css', 'static/js/*.js', 'static/lib/*']
+      }
+    },
+    copy: {
+      lib: {
+        src: 'static-dev/lib/*',
+        dest: 'static/lib/*'
+      }
+    }
     //
     watch: {
       jshint: {
