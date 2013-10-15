@@ -10,8 +10,9 @@ module.exports = {
   mysql: {
     host: '192.168.0.115',
     port: '3306',
-    username: 'root',
+    user: 'root',
     password: '123456',
-    database: 'test'
+    database: 'test',
+    timezone: 'Asia/Shanghai'
   }
 }
