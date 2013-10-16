@@ -28,7 +28,6 @@
     "grunt-nodemon": "~0.1.1",
     "grunt-concurrent": "~0.4.1",
     "grunt-contrib-jshint": "~0.6.4",
-    "grunt-contrib-compass": "~0.6.0",
     "grunt-autoprefixer": "~0.3.1",
     "grunt-contrib-csslint": "~0.1.2",
     "grunt-contrib-concat": "~0.3.0",

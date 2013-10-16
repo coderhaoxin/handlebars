@@ -1,10 +1,9 @@
 module.exports = function (grunt) {
   'use strict';
-  require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt)
 
   grunt.initConfig({
     meta: {},
-    //
     concurrent: {
       nodemon: {
         tasks: ['nodemon'],
@@ -43,7 +42,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    //
     nodemon: {
       prod: {
         options: {
@@ -66,23 +64,19 @@ module.exports = function (grunt) {
         }
       }
     },
-    //concat js,css files
     concat: {
       js: {
         src: 'static-dev/js/*.js',
         dest: 'static/js/app.js'
       }
     },
-    //
     jshint: {
       beforeconcat: ['static-dev/js/*.js'],
       afterconcat: ['static/js/app.js']
     },
-    //
     csslint: {
       src: 'static/css/app.css'
     },
-    //
     autoprefixer: {
       options: {
         browsers: ['last 2 versions']
@@ -92,7 +86,6 @@ module.exports = function (grunt) {
         dest: 'static/css/app.css'
       }
     },
-    //
     jasmine: { //测试应该测试release后的，而非dev的
       src: 'static-dev/js/*.js',
       options: {
@@ -110,26 +103,17 @@ module.exports = function (grunt) {
         dest: 'static/lib/*'
       }
     }
-    //
     watch: {
-      jshint: {
-        files: ['static/js/app.js'],
-        tasks: ['jshint'],
-        options: {
-          livereload: true
-        }
-      },
-      csslint: {
-        files: ['static/css/app.css'],
-        tasks: ['csslint'],
+      livereload: {
+        files: ['static/js/app.js', 'static/css/app.css'],
         options: {
           livereload: true
         }
       }
     }
-  });
+  })
 
-  grunt.registerTask('dev', ['concurrent:nodemon', 'concurrent:watch']);
-  grunt.registerTask('test',    ['']);
-  grunt.registerTask('release', ['']);
+  grunt.registerTask('dev', ['concurrent:nodemon', 'concurrent:watch'])
+  grunt.registerTask('test',    [''])
+  grunt.registerTask('release', [''])
 }
