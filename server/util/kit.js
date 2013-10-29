@@ -22,7 +22,7 @@ exports.hashPassword = function (password, salt, hashType) {
 * keys: array of keys
 * return: true/false
 */
-exports.must = function (obj, keys) {
+exports.have = function (obj, keys) {
   if (typeof obj !== 'object') {
     return false
   }
@@ -38,7 +38,7 @@ exports.must = function (obj, keys) {
     }
   }
 
-  if ((i + 1) < len) {
+  if (i < len) {
     return false
   } else {
     return true

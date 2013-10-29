@@ -24,9 +24,9 @@ module.exports = function (grunt) {
           file: 'app.js',
           args: ['develop'],
           nodeArgs: [],
-          ignoredFiles: ['README.md', 'node_modules/**'],
+          ignoredFiles: ['README.md', 'package.json', 'node_modules/**'],
           watchedExtensions: ['js'],
-          watchedFolders: ['service', 'util'],
+          watchedFolders: ['model', 'service', 'util'],
           delayTime: 1,
           env: {
             PORT: '3000'
@@ -40,13 +40,9 @@ module.exports = function (grunt) {
         }
       }
     },
-    jshint: {
-      beforeconcat: ['static-dev/js/*.js'],
-      afterconcat: ['static/js/app.js']
-    },
     watch: {
       livereload: {
-        files: ['static/js/app.js', 'static/css/app.css'],
+        files: ['model/*.js', 'service/*.js', 'util/*.js'],
         options: {
           livereload: true
         }
@@ -54,5 +50,5 @@ module.exports = function (grunt) {
     }
   })
 
-  grunt.registerTask('dev', ['concurrent:nodemon', 'concurrent:watch'])
+  grunt.registerTask('default', ['concurrent:nodemon', 'concurrent:watch'])
 }
