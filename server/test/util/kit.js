@@ -2,14 +2,14 @@ var should = require('should')
 
 var kit = require('../../util/kit')
 
-describe('md5Password', function () {
+describe('md5Password()', function () {
   it('', function () {
     var md5Password = kit.md5Password('123456')
     md5Password.should.equal('e10adc3949ba59abbe56e057f20f883e')
   })
 })
 
-describe('hashPassword', function () {
+describe('hashPassword()', function () {
   it('default: sha512', function () {
     var hashPassword = kit.hashPassword('123456', 'salt')
     hashPassword.should.equal('89242e35fc0b2c00ebd536973d984c354395c8afee3caf13fe6b63d3e9e3b78355ac950ffe952fe3c8ec91c3cce2e14b127948c56b478332a4d17fbf76e79672')
@@ -30,4 +30,49 @@ describe('hashPassword', function () {
     var hashPassword = kit.hashPassword('123456', 'salt', 'sha512')
     hashPassword.should.equal('89242e35fc0b2c00ebd536973d984c354395c8afee3caf13fe6b63d3e9e3b78355ac950ffe952fe3c8ec91c3cce2e14b127948c56b478332a4d17fbf76e79672')
   })
+})
+
+describe('must()', function () {
+  var o = {
+    name: 'hao',
+    age: 123,
+    point: 456,
+    level: 'member'
+  }
+  it('should true', function () {
+    var result = kit.must(o, ['name', 'age', 'point', 'level'])
+    result.should.equal(true)
+  })
+  it('should true', function () {
+    var result = kit.must(o, ['level','point', 'age',  'name'])
+    result.should.equal(true)
+  })
+  it('should true', function () {
+    var result = kit.must(o, ['name'])
+    result.should.equal(true)
+  })
+  it('should true', function () {
+    var result = kit.must(o, ['name', 'age'])
+    result.should.equal(true)
+  })
+  it('should false', function () {
+    var result = kit.must(o, ['name', 'age', 'point', 'level', 'pass'])
+    result.should.equal(false)
+  })
+  it('should false', function () {
+    var result = kit.must(o, ['pass', 'level','point', 'age',  'name'])
+    result.should.equal(false)
+  })
+  it('should false', function () {
+    var result = kit.must(o, ['name', 'pass'])
+    result.should.equal(false)
+  })
+  it('should false', function () {
+    var result = kit.must(o, ['name', 'age', 'pass'])
+    result.should.equal(false)
+  })
+})
+
+describe('only()', function () {
+
 })

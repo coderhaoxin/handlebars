@@ -3,7 +3,7 @@ var fs     = require('fs')
 var config = require('./config')
 
 /*
-* app initialize
+* dir initialize
 */
 if (!fs.existsSync(__dirname + '/upload')) {
   fs.mkdirSync('upload')

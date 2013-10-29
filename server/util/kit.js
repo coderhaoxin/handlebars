@@ -1,3 +1,5 @@
+'use strict';
+var config = require('../config')
 var crypto = require('crypto')
 
 exports.md5Password = function (password) {
@@ -63,3 +65,11 @@ exports.only = function (obj, keys) {
     }
   }
 }
+
+/*
+* send email
+*/
+var nodemailer = require('nodemailer')
+var smtpTransport = nodemailer.createTransport('SMTP', config.email)
+
+exports.email = smtpTransport.sendMail

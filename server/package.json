@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": "",
   "author": "haoxin",
@@ -20,7 +20,8 @@
     "redis": "~0.9.0",
     "node-uuid": "~1.4.1",
     "oss-client": "~0.1.0",
-    "baidu-push": "~0.1.2"
+    "nodemailer": "~0.5.3",
+    "j-sql": "~0.1.0"
   },
   "devDependencies": {
     "should": "~2.0.2",
