@@ -1,6 +1,21 @@
 ### node-app-seed
 * a project for node.js(express) app template
 
+### redis: run redis as a daemon
+config:
+```bash
+# By default Redis does not run as a daemon. Use 'yes' if you need it.
+# Note that Redis will write a pid file in /var/run/redis.pid when daemonized.
+daemonize yes
+
+# limit memory: 2GB
+maxmemory 2*1024*1024*1024
+```
+run:
+```bash
+src/redis-server
+```
+
 ### recommend some global node.js modules
 ```
 [sudo] npm install -g grunt-cli
