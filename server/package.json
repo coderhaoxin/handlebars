@@ -13,11 +13,11 @@
   "author": "haoxin",
   "license": "BSD",
   "dependencies": {
-    "express": "~3.4.3",
+    "express": "~3.4.4",
     "mysql": "~2.0.0-alpha9",
+    "connect-redis": "~1.4.5",
     "validator": "~1.5.1",
     "async": "~0.2.9",
-    "redis": "~0.9.0",
     "node-uuid": "~1.4.1",
     "oss-client": "~0.1.0",
     "nodemailer": "~0.5.3",
@@ -29,6 +29,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-concurrent": "~0.4.1",
     "load-grunt-tasks": "~0.2.0",
+    "request": "~2.27.0",
     "should": "~2.0.2"
   }
 }

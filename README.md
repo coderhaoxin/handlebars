@@ -1,19 +1,21 @@
-### node-app-seed
-* a project for node.js(express) app template
+## node-app-seed
+* a project for node.js(express-mysql) app template
 
-### redis: run redis as a daemon
-config:
+## redis: run redis as a daemon
+config: redis.conf
 ```bash
 # By default Redis does not run as a daemon. Use 'yes' if you need it.
 # Note that Redis will write a pid file in /var/run/redis.pid when daemonized.
 daemonize yes
 
 # limit memory: 2GB
-maxmemory 2*1024*1024*1024
+maxmemory 2GB
 ```
+
 run:
 ```bash
-src/redis-server
+cd src
+./redis-server ../redis.conf
 ```
 
 ### recommend some global node.js modules
