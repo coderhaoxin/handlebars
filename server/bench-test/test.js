@@ -14,13 +14,14 @@ for (var i = 0, j = 0; i < times; i++) {
 		jar: true,
 		json: {}
 	}, function (error, res, data) {
-		res.statusCode.should.equal(200)
+		if (res.statusCode !== 200) {
+			console.log('error')
+		}
 		j++
+		if ((j+1) === times) {
+			console.log('times:', times)
+			console.log('continue time: ', (Date.now() - startTime) / 1000, 's')
+		}
 	})
-
-	if ((j+1) === times) {
-		console.log('times:', times)
-		console.log('continue time: ', (Date.now() - startTime) / 1000, 's')
-	}
 }
 
