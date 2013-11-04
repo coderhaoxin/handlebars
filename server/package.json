@@ -14,14 +14,14 @@
   "license": "BSD",
   "dependencies": {
     "express": "~3.4.4",
+    "express-validator": "~0.8.0",
     "mysql": "~2.0.0-alpha9",
+    "j-sql": "~0.1.0",
     "connect-redis": "~1.4.5",
-    "validator": "~1.5.1",
     "async": "~0.2.9",
     "node-uuid": "~1.4.1",
     "oss-client": "~0.1.0",
-    "nodemailer": "~0.5.3",
-    "j-sql": "~0.1.0"
+    "nodemailer": "~0.5.3"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
