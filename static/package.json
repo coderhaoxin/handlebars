@@ -1,6 +1,6 @@
 {
-  "name": "static-dev",
-  "version": "0.0.0",
+  "name": "static",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,12 +12,10 @@
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-concurrent": "~0.4.1",
-    "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-jasmine": "~0.5.2",
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-usemin": "~2.0.0",
-    "load-grunt-tasks": "~0.2.0",
-    "grunt-contrib-clean": "~0.5.0"
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-concurrent": "~0.4.1",
+    "load-grunt-tasks": "~0.2.0"
   }
 }
