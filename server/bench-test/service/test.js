@@ -1,8 +1,7 @@
 'use strict';
 
 var request = require('request')
-var should  = require('should')
-var hostname = require('./config').host + ':' + require('./config').port
+var hostname = require('../config').host + ':' + require('../config').port
 
 var times = 10000
 

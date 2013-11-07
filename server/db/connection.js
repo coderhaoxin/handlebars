@@ -34,4 +34,4 @@ function keepConnection() {
   }, 10 * 60 * 1000)//10 min
 }
 
-exports.connection = connection
+module.exports = connection
