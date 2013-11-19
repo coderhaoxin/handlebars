@@ -5,7 +5,7 @@ module.exports = {
     port: 6379
   },
   mysql: {
-    host: '192.168.0.115',
+    host: 'localhost',
     port: '3306',
     user: 'root',
     password: '123456',
@@ -18,7 +18,7 @@ module.exports = {
     bucketName: ''
   },
   email: {
-    service: 'Gmail',
+    service: '',
     auth: {
       user: '',
       pass: ''
