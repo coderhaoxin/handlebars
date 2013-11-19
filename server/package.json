@@ -30,6 +30,7 @@
     "grunt-concurrent": "~0.4.1",
     "load-grunt-tasks": "~0.2.0",
     "request": "~2.27.0",
-    "should": "~2.0.2"
+    "should": "~2.0.2",
+    "grunt-contrib-jshint": "~0.7.2"
   }
 }
