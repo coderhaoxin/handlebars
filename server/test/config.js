@@ -1,4 +1,4 @@
 module.exports = {
-  host: 'http://localhost',
-  port: require('../config').port
+	host: 'http://localhost',
+	port: require('../config/test').port
 }
