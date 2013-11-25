@@ -17,7 +17,7 @@ if (!fs.existsSync('./upload')) {
 * express
 */
 app.use(express.cookieParser())
-// app.use(express.cookieSession({ secret: 'node-app-seed', cookie: { maxAge: 15*24*60*60*1000 } }));
+// app.use(express.cookieSession({ secret: 'node-app-seed', cookie: { maxAge: 15*24*60*60*1000 } }))
 app.use(express.bodyParser({ uploadDir: './upload' }))
 
 // redis session
