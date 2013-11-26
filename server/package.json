@@ -16,7 +16,7 @@
     "express": "~3.4.4",
     "validator": "~2.0.0",
     "mysql": "~2.0.0-alpha9",
-    "j-sql": "~0.1.0",
+    "orm": "~2.1.3",
     "connect-redis": "~1.4.5",
     "async": "~0.2.9",
     "node-uuid": "~1.4.1",
