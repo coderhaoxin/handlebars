@@ -4,7 +4,7 @@ var request = require('request')
 var should  = require('should')
 var hostname = require('../config').host + ':' + require('../config').port
 
-describe('service: test', function () {
+describe('service: user', function () {
 	it('signin', function (done) {
 		request({
 			url: hostname + '/api/test/signin',
