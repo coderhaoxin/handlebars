@@ -1,8 +1,8 @@
 'use strict';
 
 var should = require('should')
-var User   = require('../../model/user')
-var kit    = require('../../util/kit')
+var User   = require('../model/user')
+var kit    = require('../util/kit')
 
 var user = {
 	username: 'haoxin',
