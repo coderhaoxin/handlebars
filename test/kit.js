@@ -1,6 +1,5 @@
 var should = require('should')
-
-var kit = require('../../util/kit')
+var kit    = require('../util/kit')
 
 describe('md5Password()', function () {
 	it('', function () {

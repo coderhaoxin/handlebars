@@ -1,24 +1,16 @@
-var test = require('./service/test')
 var user = require('./service/user')
 
 module.exports = function (app) {
-	// test
-	app.get('/api/test/session', test.session)
-	app.post('/api/test/signin', test.signin)
-	app.post('/api/test/logout', test.logout)
-
-	// user
+	/*
+	* user
+	*/
 	app.get('/api/user/session', user.session)
-	app.get('/api/user/:id', user.getUserById)
-	app.put('/api/user/:id', user.putUserById)
-	app.post('/api/user', user.postUser)
-	app.post('/api/user/signin', user.signin)
-	app.post('/api/user/signup', user.signup)
-}
+	app.get('/api/user/signout', user.signout)
+	app.get('/api/user/:id', user.get)
+	app.get('/api/users', user.gets)
 
-app.use(koa_route.get('/users'), function *() {
-	this.body = 'users'
-})
-app.use(koa_route.get('/users/:id'), function *() {
-	this.body = 'a user'
-})
+	app.put('/api/user/:id', user.put)
+	app.post('/api/user', user.post)
+	app.post('/api/user/signin', user.signin)
+
+}

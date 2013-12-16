@@ -1,4 +1,11 @@
-var config = require('./config')
+var config      = require('./config')
+var etag        = require('koa-etag')
+var session     = require('koa-session')
+var staticCache = require('koa-static-cache')
+var view        = require('co-views')
+var koa         = require('koa')
+var router      = require('koa-router')
+var app         = koa()
 
 /*
 * dir initialize
@@ -8,28 +15,26 @@ if (!fs.existsSync('./upload')) {
 	fs.mkdirSync('upload')
 }
 
-var etag        = require('koa-etag')
-var session     = require('koa-session')
-var staticCache = require('koa-static-cache')
-var parse       = require('co-body')
-var view        = require('co-views')
-var koa         = require('koa')
-var router      = require('koa-router')
-var app         = koa()
-
+/*
+* app config
+*/
 app.use(etag())
-app.use(staticCache('../static', { maxAge: 10 }))
+app.use(staticCache('./static', { maxAge: 1000 }))
 app.use(session)
 app.use(router(app))
 
+/*
+* view
+*/
 view('./view', {
 	map: { html: 'swig' }
 })
 
-// route
-app.get('/users/:id', function *(id) {
-	this.body = 'hello'
-})
+/*
+* route
+*/
+var route = require('./route')
+route(app)
 
 app.listen(config.port)
 console.log('server start on port: ', config.port)

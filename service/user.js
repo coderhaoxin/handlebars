@@ -1,31 +1,56 @@
-exports.session = function () {
+var parse = require('co-body')
+
+exports.session = function *() {
+	this.body = this.session
+}
+
+exports.signin = function *() {
+	var body = parse(this)
+	this.session = body
+	this.body = {
+		message: 'success'
+	}
+}
+
+exports.signout = function *() {
+	this.session = {}
+	this.body = {
+		message: 'success'
+	}
+}
+
+exports.gets = function *() {
+	var query = parse(this)
+	console.log(query)
+
+	this.body = [{
+		name: 'hao'
+	}, {
+		name: 'xin'
+	}]
+}
+
+exports.get = function *(id) {
+	this.body = {
+		id: id,
+		name: 'hx'
+	}
+}
+
+exports.put = function *(id) {
 
 }
 
-exports.signin = function () {
+exports.post = function *() {
+	var body = parse(this)
+	console.log(body)
 
+	this.body = body
 }
 
-exports.signout = function () {
-
-}
-
-exports.gets = function () {
-
-}
-
-exports.get = function () {
-
-}
-
-exports.put = function () {
-
-}
-
-exports.post = function () {
-
-}
-
-exports.del = function () {
-
+exports.del = function *(id) {
+	this.body = {
+		id: id,
+		message: 'success'
+	}
 }
