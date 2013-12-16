@@ -1,0 +1,39 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": "",
+  "author": "haoxin",
+  "license": "BSD",
+  "dependencies": {
+    "koa": "0.0.2",
+    "koa-router": "~1.5.5",
+    "koa-static-cache": "~0.1.0",
+    "koa-etag": "~1.1.0",
+    "koa-csrf": "~0.1.0",
+    "koa-session": "~1.1.0",
+    "lodash": "~2.4.1",
+    "mysql": "~2.0.0-rc2",
+    "co-fs": "~1.1.1",
+    "co-views": "~0.1.0",
+    "co-body": "0.0.1",
+    "co-multipart": "0.0.1",
+    "corm": "0.0.0",
+    "swig": "~1.2.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-nodemon": "~0.1.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "load-grunt-tasks": "~0.2.0",
+    "co-request": "~0.1.0",
+    "should": "~2.1.1"
+  }
+}
