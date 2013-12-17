@@ -1,6 +1,7 @@
-var r    = require('koa-route')
+var r      = require('koa-route')
 
-var user = require('./service/user')
+var user   = require('./service/user')
+var upload = require('./service/upload')
 
 module.exports = function (app) {
 	/*
@@ -14,4 +15,9 @@ module.exports = function (app) {
 	app.use(r.put('/api/user/:id', user.put))
 	app.use(r.post('/api/user', user.post))
 	app.use(r.post('/api/user/signin', user.signin))
+
+	/*
+	* upload
+	*/
+	app.use(r.post('/api/upload/file', upload.file))
 }
