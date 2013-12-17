@@ -14,7 +14,7 @@
   "license": "BSD",
   "dependencies": {
     "koa": "0.0.2",
-    "koa-router": "~1.5.5",
+    "koa-route": "~1.0.2",
     "koa-static-cache": "~0.1.0",
     "koa-etag": "~1.1.0",
     "koa-csrf": "~0.1.0",
@@ -33,8 +33,7 @@
     "grunt-nodemon": "~0.1.2",
     "grunt-contrib-watch": "~0.5.3",
     "load-grunt-tasks": "~0.2.0",
-    "co-request": "~0.1.0",
-    "should": "~2.1.1",
-    "co": "*"
+    "request": "~2.30.0",
+    "should": "~2.1.1"
   }
 }

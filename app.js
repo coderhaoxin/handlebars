@@ -4,7 +4,7 @@ var session     = require('koa-session')
 var staticCache = require('koa-static-cache')
 var view        = require('co-views')
 var koa         = require('koa')
-var router      = require('koa-router')
+// var router      = require('koa-router')
 var app         = koa()
 
 /*
@@ -18,10 +18,10 @@ if (!fs.existsSync('./upload')) {
 /*
 * app config
 */
-app.use(etag())
+// app.use(etag())
 app.use(staticCache('./static', { maxAge: 1000 }))
-app.use(session)
-app.use(router(app))
+// app.use(session)
+// app.use(router(app))
 
 /*
 * view

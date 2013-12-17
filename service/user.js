@@ -1,28 +1,25 @@
 var parse = require('co-body')
 
-exports.session = function *() {
+exports.session = function* () {
 	this.body = this.session
 }
 
-exports.signin = function *() {
-	var body = parse(this)
+exports.signin = function* () {
+	var body = yield parse(this)
 	this.session = body
 	this.body = {
 		message: 'success'
 	}
 }
 
-exports.signout = function *() {
+exports.signout = function* () {
 	this.session = {}
 	this.body = {
 		message: 'success'
 	}
 }
 
-exports.gets = function *() {
-	var query = parse(this)
-	console.log(query)
-
+exports.gets = function* () {
 	this.body = [{
 		name: 'hao'
 	}, {
@@ -30,25 +27,26 @@ exports.gets = function *() {
 	}]
 }
 
-exports.get = function *(id) {
+exports.get = function* (id) {
 	this.body = {
 		id: id,
 		name: 'hx'
 	}
 }
 
-exports.put = function *(id) {
-
-}
-
-exports.post = function *() {
-	var body = parse(this)
-	console.log(body)
+exports.put = function* (id) {
+	var body = yield parse(this)
 
 	this.body = body
 }
 
-exports.del = function *(id) {
+exports.post = function* () {
+	var body = yield parse(this)
+
+	this.body = body
+}
+
+exports.del = function* (id) {
 	this.body = {
 		id: id,
 		message: 'success'
