@@ -2,6 +2,7 @@ var r      = require('koa-route')
 
 var user   = require('./service/user')
 var upload = require('./service/upload')
+var view   = require('./service/view')
 
 module.exports = function (app) {
 	/*
@@ -20,4 +21,9 @@ module.exports = function (app) {
 	* upload
 	*/
 	app.use(r.post('/api/upload/file', upload.file))
+
+	/*
+	* view
+	*/
+	app.use(r.get('/'), view.index)
 }
