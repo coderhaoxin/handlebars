@@ -18,7 +18,8 @@ if (!fs.existsSync('./upload')) {
 */
 app.use(etag())
 app.use(staticCache('./static', { maxAge: 1000 }))
-// app.use(session)
+app.keys = ['koa-cookie-key']
+app.use(session())
 
 /*
 * route
