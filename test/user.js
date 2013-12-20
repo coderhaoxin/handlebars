@@ -18,18 +18,18 @@ describe('service: user', function () {
 			done()
 		})
 	})
-	// it('get session', function (done) {
-	// 	request({
-	// 		url: hostname + '/api/user/session',
-	// 		method: 'GET',
-	// 		jar: true,
-	// 		json: true
-	// 	}, function (error, response, body) {
-	// 		console.log(response.statusCode)
-	// 		console.log(body)
-	// 		done()
-	// 	})
-	// })
+	it('get session', function (done) {
+		request({
+			url: hostname + '/api/user/session',
+			method: 'GET',
+			jar: true,
+			json: true
+		}, function (error, response, body) {
+			console.log(response.statusCode)
+			console.log(body)
+			done()
+		})
+	})
 	it('signout', function (done) {
 		request({
 			url: hostname + '/api/user/signout',

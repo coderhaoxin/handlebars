@@ -46,7 +46,7 @@ exports.post = function* () {
 	this.body = body
 }
 
-exports.del = function* (id) {
+exports.delete = function* (id) {
 	this.body = {
 		id: id,
 		message: 'success'
