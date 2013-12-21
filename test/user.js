@@ -1,87 +1,73 @@
-var request  = require('request')
-var should   = require('should')
-var hostname = 'http://localhost:' + require('../config').port
+var should  = require('should')
+var request = require('supertest')
+require     = request('http://localhost:' + require('../config').port)
+
 
 describe('service: user', function () {
 	it('signin', function (done) {
-		request({
-			url: hostname + '/api/user/signin',
-			method: 'POST',
-			jar: true,
-			json: {
-				username: 'hao',
-				password: '123'
-			}
-		}, function (error, response, body) {
-			response.statusCode.should.equal(200)
-			body.message.should.equal('success')
+		request
+		.post('/api/user/signin')
+		.send({
+			username: 'hao',
+			password: '123'
+		})
+		.expect(200)
+		.end(function (error, res) {
+			console.log(res.body)
 			done()
 		})
 	})
 	it('get session', function (done) {
-		request({
-			url: hostname + '/api/user/session',
-			method: 'GET',
-			jar: true,
-			json: true
-		}, function (error, response, body) {
-			console.log(response.statusCode)
-			console.log(body)
+		request
+		.get('/api/user/session')
+		.expect(200)
+		.end(function (error, res) {
+			console.log(res.body)
 			done()
 		})
 	})
 	it('signout', function (done) {
-		request({
-			url: hostname + '/api/user/signout',
-			method: 'GET',
-			jar: true,
-			json: true
-		}, function (error, response, body) {
-			response.statusCode.should.equal(200)
-			body.message.should.equal('success')
+		request
+		.get('/api/user/signout')
+		.expect(200)
+		.end(function (error, res) {
+			console.log(res.body)
 			done()
 		})
 	})
 	// it('get session', function (done) {
-	// 	request({
-	// 		url: hostname + '/api/user/session',
-	// 		method: 'GET',
-	// 		jar: true,
-	// 		json: true
+	// 	request
+	// 	.get('/api/user/session')
+	// 	.expect(200)
+	// 	.end(function (error, res) {
+	// 		console.log(res.body)
+	// 		done()
 	// 	})
-	// }, function (error, response, body) {
-	// 	console.log(response.statusCode)
-	// 	console.log(body)
-	// 	done()
 	// })
 })
 
 describe('service: user', function () {
 	it('post', function (done) {
-		request({
-			url: hostname + '/api/user?a=12',
-			method: 'POST',
-			jar: true,
-			json: {
-				name: 'hello, koa'
-			}
-		}, function (error, response, body) {
-			response.statusCode.should.equal(200)
-			body.name.should.equal('hello, koa')
+		request
+		.post('/api/user?a=12')
+		.send({
+			name: 'hello, koa'
+		})
+		.expect(200)
+		.end(function (error, res) {
+			console.log(res.body)
 			done()
 		})
 	})
 	it('put', function (done) {
-		request({
-			url: hostname + '/api/user/1',
-			method: 'PUT',
-			jar: true,
-			json: {
-				name: 'haha, go'
-			}
-		}, function (error, response, body) {
-			response.statusCode.should.equal(200)
-			body.name.should.equal('haha, go')
+		request
+		.post('/api/user/1')
+		.send({
+			name: 'haha, go'
+		})
+		.expect(200)
+		.end(function (error, res) {
+			console.log(res.body)
 			done()
 		})
 	})
