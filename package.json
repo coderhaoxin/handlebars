@@ -20,13 +20,14 @@
     "koa": "~0.1.1",
     "koa-route": "~1.0.2",
     "koa-static-cache": "~0.1.0",
-    "koa-etag": "~1.1.0",
+    "koa-etag": "~1.2.1",
     "koa-csrf": "~0.1.0",
-    "koa-session": "~1.1.0",
+    "koa-session": "~1.2.0",
     "co-fs": "~1.1.1",
     "co-body": "0.0.1",
     "co-views": "~0.1.0",
-    "co-multipart": "0.0.1"
+    "co-multipart": "0.0.1",
+    "koa-logger": "~1.1.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

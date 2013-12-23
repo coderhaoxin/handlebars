@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<title>index</title>
-	<h1>{{ index.title }}</h1>
+	<h1>{{ title }}</h1>
+	{% for eachItem in items %}
+		<ul>
+			<li>{{ eachItem.id }}</li>
+			<li>{{ eachItem.name }}</li>
+			<li>{{ eachItem.quantity }}</li>
+			<li>{{ eachItem.price }}</li>
+			<li>{{ eachItem.createTime }}</li>
+		</ul>
+	{% endfor%}
 </html>

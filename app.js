@@ -1,5 +1,6 @@
 var config      = require('./config')
 var etag        = require('koa-etag')
+var logger      = require('koa-logger')
 var session     = require('koa-session')
 var staticCache = require('koa-static-cache')
 var koa         = require('koa')
@@ -20,6 +21,9 @@ app.keys = ['koa-cookie-key']
 app.use(etag())
 app.use(session())
 app.use(staticCache('./static', { maxAge: 1000 }))
+if (!config.production) {
+	app.use(logger())
+}
 
 /*
 * route

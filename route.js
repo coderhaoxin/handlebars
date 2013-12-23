@@ -25,5 +25,5 @@ module.exports = function (app) {
 	/*
 	* view
 	*/
-	app.use(r.get('/'), view.index)
+	app.use(r.get('/', view.index))
 }
