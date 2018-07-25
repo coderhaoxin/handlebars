@@ -1,12 +1,9 @@
 package handlebars
 
-import . "github.com/tj/go-debug"
 import "path/filepath"
 import "strings"
 import "path"
 import "os"
-
-var debug = Debug("handlebars")
 
 type Render struct {
 	dir        string
@@ -122,12 +119,12 @@ func (r *Render) getTemplate(s string, isPath bool) *Template {
 		tmpl, ok := r.cache[abs]
 
 		if ok {
-			debug("from cache")
+			// debug("from cache")
 			return tmpl
 		}
 
 		tmpl, err := parseFile(abs, config{partials: r.partials})
-		debug("parse file: %s", abs)
+		// debug("parse file: %s", abs)
 		panicError(err)
 
 		r.addToCache(abs, tmpl)
@@ -139,12 +136,12 @@ func (r *Render) getTemplate(s string, isPath bool) *Template {
 	tmpl, ok := r.cache[key]
 
 	if ok {
-		debug("from cache")
+		// debug("from cache")
 		return tmpl
 	}
 
 	tmpl, err := parseString(s, config{partials: r.partials})
-	debug("parse string: %v", s)
+	// debug("parse string: %v", s)
 	panicError(err)
 
 	r.addToCache(key, tmpl)
@@ -157,7 +154,7 @@ func (r *Render) addToCache(key string, tmpl *Template) {
 		return
 	}
 
-	debug("add to cache")
+	// debug("add to cache")
 	r.cache[key] = tmpl
 }
 

@@ -12,7 +12,7 @@ func TestHandlebars(t *testing.T) {
 		})
 
 		Convey("parse", func() {
-			debug("dir: %s, ext: %s, cacheLimit: %d", render.dir, render.ext, render.cacheLimit)
+			// debug("dir: %s, ext: %s, cacheLimit: %d", render.dir, render.ext, render.cacheLimit)
 
 			ctx := map[string]string{
 				"name": "haoxin",
